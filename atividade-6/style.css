@@ -1,0 +1,46 @@
+*{
+   margin:0;
+   padding: 0;
+   box-sizing: border-box;
+}
+body{
+   display: flex;
+   width: 100vw;
+   height: 100vh;
+   padding: 50px;
+   background-color: blanchedalmond;
+}
+#informacoes-pessoais{
+   width: 40vw;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+#informacoes-hobby{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   width: 40vw;
+
+}
+#titulo{
+   display: flex;
+   justify-content: center;
+}
+#perfil{
+   left: 3%;
+   height: 70vh;
+   border: 1px brown solid;
+   border-radius: 15px;
+}
+
+#imagem1{
+   width: 25vw;
+   margin-bottom: 30px;
+   margin-top: 30px;
+}
+#imagem2{
+   width: 25vw;
+}
