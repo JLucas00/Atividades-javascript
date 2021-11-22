@@ -1,0 +1,36 @@
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+@font-face {
+   font-family: proxima-nova;
+   src: url(assets/fonts/Proxima-Nova.ttf);
+}
+@font-face {
+   font-family: sedgwick;
+   src: url(SedgwickAveDisplay-Regular.ttf);
+}
+a:link{
+   color:cornsilk;
+}
+a:hover{
+   color: lightblue;
+}
+a:visited{
+   color:cornsilk;
+}
+a{
+   text-decoration: none;
+}
+li{
+   list-style: none;
+   font-size: large;
+   margin: 20px;
+}
+ul{
+   display: flex;
+   flex-wrap: wrap;
+   margin: 30px;
+   justify-content: space-around;
+}
