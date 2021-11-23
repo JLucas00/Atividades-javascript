@@ -19,7 +19,8 @@ document.querySelector("header").style.justifyContent= "center";
 document.querySelector("header").style.alignItems= "center";
 
 /* Estilização da imagem do header */
-document.querySelector(".imagem-logo-metallica").style.height= "80%";
+document.querySelector(".imagem-logo-metallica").style.width= "30vw";
+document.querySelector(".imagem-logo-metallica").style.minWidth= "300px";
 
 
 /* Estilização da seção do meu perfil */
