@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="style.css">
+   <title>Document</title>
+</head>
+<body>
+   <header>
+      <img src="assets/images/logo-marcaedtech.png" alt="">
+      <h1>Alpha Card games</h1>
+      <div id="icons-header">
+         <img src="assets/images/logo-yugioh.png" alt="">
+         <img src="assets/images/logo-pokemon.png" alt="">
+         <img src="assets/images/logo-magic.png" alt="">
+      </div>
+   </header>
+   <main>
+      <aside>
+         <div id="description">
+            <h2>Descrição</h2>
+            <p>Esta página recebe avaliações de satisfação</p>
+         </div>
+         <div id="imagem-yugi">
+
+         </div>
+      </aside>
+      <section id="formulario">
+         <form action="">
+            <fieldset>
+               <h2>Preencha o formulario de satisfação do Alpha Card Games</h2>
+               </br>
+               <label for="usuario"> Nome completo:</label>
+               </br>
+               <input type="text" name="nome" id="usuario" placeholder="digite seu nome">
+               </br>
+               </br>
+               <label for="">Nota:</label>
+               </br>
+               </br>
+               <ul>
+                  <li id="1" onclick="hoverAvaliacao()"></li>
+                  <li id="2" onclick="hoverAvaliacao()"></li>
+                  <li id="3" onclick="hoverAvaliacao()"></li>
+                  <li id="4" onclick="hoverAvaliacao()"></li>
+                  <li id="5" onclick="hoverAvaliacao()"></li>
+               </ul>
+               </br>
+               <label for="coment"> Comentários e sugestões:</label>
+               </br>
+               <textarea name="sugest" id="coment" cols="30" rows="10" placeholder="digite aqui seus comentários"></textarea>
+               </br>
+               <button type="button" id="submit" onclick="escreverNoBloco()">Enviar</button>
+            </fieldset>
+         </form>
+      </section>
+      <section id="respostas">
+         <h3 id="titulo-resposta"></h3>
+         </br>
+         </br>
+         <p id="nome-resposta"></p>
+         </br>
+         <div id="icons-resposta"></div>
+         <p id="comentarios-resposta"></p>
+      </section>
+      
+   </main>
+   <footer>
+
+   </footer>
+
+
+   <script src="script.js"></script>
+</body>
+</html>

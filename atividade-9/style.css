@@ -1,0 +1,145 @@
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+body{
+   width: 100vw;
+   background-color: rgb(231, 253, 231);
+}
+main{
+   padding: 0px 20px 0px 20px;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+}
+header{
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+   flex-wrap: wrap;
+   width: 100vw;
+   min-width: 300px;
+   max-height: min-content;
+   min-height: 120px;
+   padding: 20px;
+   background-color: rgb(1, 73, 1);
+   color: white;
+}
+header > img{
+   height: 60px;
+   min-width: 100px;
+   margin: 10px 5px;
+}
+header > div > img{
+   height: 50px;
+   min-width: 100px;
+   margin: 10px 5px;
+}
+header h1{
+   min-width: 280px;
+}
+#icons-header{
+   width: 50%;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-around;
+}
+aside{
+   width: 30vw;
+   min-width: min-content;
+}
+#description{
+   width: 30vw;
+   min-width: 200px;
+   height: min-content;
+   border: 3px solid black;
+   border-radius: 10px;
+   margin: 20px 0px;
+   padding: 15px;
+   box-shadow: 0px 0px 20px rgb(71, 10, 10);
+}
+#imagem-yugi{
+   width: 30vw;
+   min-width: 200px;
+   min-height: min-content;
+   height: clamp(200px, 30vw, 500px);
+   background-image: url(assets/images/yugi.png);
+   background-size: contain;
+   background-repeat: no-repeat;
+}
+#formulario{
+   width: 30vw;
+   min-width: 300px;
+   max-width: min-content;
+   height: min-content;
+   margin: 20px;
+   padding: 20px;
+   border: 3px solid black;
+   box-shadow: 0px 0px 20px rgb(71, 10, 10);
+}
+fieldset{
+   border: none;
+}
+fieldset h2{
+   max-width: 100%;
+}
+ul{
+   display: flex;
+   list-style: none;
+}
+ul li{
+   display: flex;
+   width: 50px;
+   height: 50px;
+   background-image: url(assets/images/milenium-simbol.png);
+   filter: saturate(40%);
+   background-size: contain;
+   background-repeat: no-repeat;
+}
+ul li:hover{
+   filter: saturate(200%);
+}
+#usuario{
+   padding: 5px;
+   width: 100%;
+}
+textarea{
+   max-width: clamp(calc(300px - 46px), 30vw, calc(30vw - 46px));
+   min-height: 200px;
+   padding: 5px;
+}
+#submit{
+   margin-top: 20px;
+}
+.respostas{
+   width: 30vw;
+   min-width: 300px;
+   max-width: 600px;
+   height: min-content;
+   margin: 20px;
+   padding: 20px;
+   border: 3px solid black;
+   box-shadow: 0px 0px 20px rgb(71, 10, 10);
+}
+#respostas{
+   width: 30vw;
+   min-width: 300px;
+   max-width: 600px;
+   height: min-content;
+}
+#titulo-resposta{
+   max-width: clamp(calc(300px - 46px), 30vw, calc(600px - 46px));
+}
+#nome-resposta{
+   display: flex;
+   flex-wrap: wrap;
+   max-width: clamp(calc(300px - 46px), 30vw, calc(600px - 46px));
+}
+#comentarios-resposta{
+   display: flex;
+   flex-wrap: wrap;
+   /* max-width: 100%; */
+   max-width: clamp(calc(300px - 46px), 30vw, calc(600px - 46px));
+   
+}
