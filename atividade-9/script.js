@@ -12,15 +12,33 @@ function escreverNoBloco(){
    
 }
 
-
-/* function hoverAvaliacao(num){
-   let itensAvaliacao=document.getElementById(this).id;
-   let num=parseInt(itensAvaliacao);
-   for(i=0 ; i<num ; i++){
-      let item=i;
-      document.getElementById("nome-resposta").innerHTML= "avaliação:" + i + "estrelas";
-      console.log(item);
-      document.getElementById(i).style.filter="saturate(200%)";
-      console.log(num);
+let selecao=1;
+function hoverAvaliacao(elemento){
+   let itensAvaliacao=elemento.id;
+   let num=parseInt(itensAvaliacao, 10);
+   selecao=num;
+   for(let i=1 ; i<=num ; i++){
+      let j="" + i;
+      document.getElementById(j).style.filter="saturate(200%)";
    }
-} */
+   for(let i=1+num ; i<=5 ; i++ ){
+      let j="" + i;
+      document.getElementById(j).style.filter="saturate(50%)";
+   }
+}
+function hoverAvaliacao2(elemento){
+   let itensAvaliacao=elemento.id;
+   let num=parseInt(itensAvaliacao, 10);
+   for(let i=1 ; i<=num ; i++){
+      let j="" + i;
+      document.getElementById(j).style.filter="saturate(200%)";
+   }
+   for(let i=1+num ; i<=5 ; i++ ){
+      let j="" + i;
+      document.getElementById(j).style.filter="saturate(50%)";
+   }
+}
+
+function removeHover(elemento){
+   hoverAvaliacao2(document.getElementById("" + selecao))
+}
