@@ -13,7 +13,7 @@ function escreverNoBloco(){
 }
 
 
-function hoverAvaliacao(num){
+/* function hoverAvaliacao(num){
    let itensAvaliacao=document.getElementById(this).id;
    let num=parseInt(itensAvaliacao);
    for(i=0 ; i<num ; i++){
@@ -23,4 +23,4 @@ function hoverAvaliacao(num){
       document.getElementById(i).style.filter="saturate(200%)";
       console.log(num);
    }
-}
+} */
