@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="style.css">
+   <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+   <title>Calculadora</title>
+</head>
+<body>
+   <header>
+      <h1>Calculadora virtual</h1>
+      <div>
+         <button id="clear" onclick="limpar()"><img src="assets/images/calcular.png" alt=""></button>
+         <h4>Limpar resultados</h4>
+      </div>
+   </header>
+   <main>
+      <section id="calculadora1">
+         <div id="digitar1">
+            <label for="">Número 1</label>
+            <input type="number" id="numero1" placeholder="Digite um número">
+         </div>
+         <div id="operadores">
+            <div>
+               <button id="adicao" onclick="operador(id)"><img src="assets/images/icon-adicao.png" alt=""></button>
+               <button id="subtracao" onclick="operador(id)"><img src="assets/images/icon-subtracao.png" alt=""></button>
+            </div>
+            <div>
+               <button id="multiplicacao" onclick="operador(id)"><img src="assets/images/icon-multiplicacao.png" alt=""></button>
+               <button id="divisao" onclick="operador(id)"><img src="assets/images/icon-divisao.png" alt=""></button>
+            </div>
+         </div>
+         <div id="digitar2">
+            <label for="">Número 2</label>
+            <input type="number" id="numero2" placeholder="Digite um número">
+         </div>
+         <button id="igual" onclick="calcula()"><img src="assets/images/icon-igual.png" alt=""></button>
+         <div id="resultado">
+            <h3 id="print-resultado1">
+
+            </h3>
+            <h3 id="print-resultado2">
+               
+            </h3>
+         </div>
+      </section>
+   </main>
+   <script src="script.js"></script>
+</body>
+</html>

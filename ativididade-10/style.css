@@ -1,0 +1,173 @@
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+:root{
+   --tamanho-operador: 50px;
+   --font-operador: cursive;
+}
+
+body{
+   width: 100vw;
+   background-color: burlywood;
+   overflow-x: hidden;
+   font-family: "Permanent Marker", cursive;
+}
+header{
+   text-align: center;
+   display: flex;
+   width: 100vw;
+   min-height: 100px;
+   max-height: min-content;
+   flex-wrap: wrap;
+   justify-content: space-around;
+   align-items: center;
+}
+header div button{
+   width: 80px;
+   height: 80px;
+   background-color: transparent;
+   border: none;
+   padding: 0;
+}
+header img{
+   height: 80px;
+}
+main{
+   width: 100vw;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+
+}
+[placeholder]{
+   font-family: cursive;
+}
+#calculadora1{
+   display: flex;
+   flex-wrap: wrap;
+   flex: 1;
+   justify-content: space-evenly;
+   align-items: center;
+   width: 80vw;
+   height: 80vh;
+   max-height: min-content;
+}
+#digitar1{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   width: 280px;
+   height: 100px;
+}
+#digitar1 input{
+   width: 100%;
+   padding: 10px;
+   border: 3px black solid;
+}
+#digitar2{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   width: 280px;
+   height: 100px;
+}
+#digitar2 input{
+   width: 100%;
+   padding: 10px;
+   border: 3px black solid;
+}
+#operadores{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   width: 180px;
+   height: 180px;
+   background-color: rgb(128, 74, 74);
+   border: 10px solid rgb(253, 240, 181);
+   box-shadow: inset 0px 0px 20px gold;
+   border-radius: 50%;
+}
+#operadores div{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+#adicao{
+   width: var(--tamanho-operador);
+   height: var(--tamanho-operador);
+   font-family: var(--font-operador);
+   margin: 0;
+   background-color: white;
+   padding: 10px 0 0 10px;
+   border: none;
+   border-radius: 100% 0 0 0;
+}
+#subtracao{
+   width: var(--tamanho-operador);
+   height: var(--tamanho-operador);
+   font-family: var(--font-operador);
+   margin: 0;
+   background-color: white;
+   padding: 10px 10px 0 0;
+   border: none;
+   border-radius: 0 100% 0 0;
+}
+#multiplicacao{
+   width: var(--tamanho-operador);
+   height: var(--tamanho-operador);
+   font-family: var(--font-operador);
+   margin: 0;
+   background-color: white;
+   padding: 0 0 10px 10px;
+   border: none;
+   border-radius: 0 0 0 100%;
+}
+#divisao{
+   width: var(--tamanho-operador);
+   height: var(--tamanho-operador);
+   font-family: var(--font-operador);
+   margin: 0;
+   background-color: white;
+   padding: 0 10px 10px 0;
+   border: none;
+   border-radius: 0 0 100% 0;
+}
+#multiplicacao:hover, #divisao:hover, #adicao:hover, #subtracao:hover{
+   border: 2px solid grey;
+   background-color: rgb(250, 242, 199);
+}
+#resultado{
+   min-width: 300px;
+   max-width: min-content;
+   min-height: 120px;
+   max-height: min-content;
+   border: 3px solid black;
+   border-radius: 10px;
+   background-color: rgb(241, 220, 191);
+   padding: 20px;
+}
+#print-resultado{
+  /*  word-break: break-all; */
+   text-align: justify;
+   min-width: 210px;
+   max-width: min-content;
+}
+#igual{
+   width: 50px;
+   height: 50px;
+   display: flex;
+   margin: 50px;
+   justify-content: center;
+   align-items: center;
+   border: 5px solid black;
+   box-shadow: 0 0 10px grey;
+   background-color: rgb(50, 235, 186);
+}
+#igual:hover{
+   background-color: rgb(0, 255, 136);
+}
