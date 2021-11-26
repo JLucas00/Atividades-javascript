@@ -1,0 +1,168 @@
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+:root{
+   --tamanho-post-opcoes: 230px;
+}
+body{
+   width: 100vw;
+   overflow-x: hidden;
+}
+header{
+   display: flex;
+   flex-wrap: wrap;
+   align-items: center;
+   justify-content: space-between;
+   min-width: 600px;
+   min-height: 100px;
+   max-height: min-content;
+   background-color: rgb(66, 10, 10);
+   font-family: "Permanent Marker", cursive;
+   color: white;
+   letter-spacing: 10px;
+}
+#titulo{
+   display: flex;
+   align-items: center;
+   height: 100%;
+}
+#titulo img{
+   height: 80px;
+   margin: 20px 20px;
+}
+#icons-header{
+   display: flex;
+   align-items: center;
+   justify-content: space-evenly;
+   height: 100%;
+   width: 250px;
+   margin: 0px 30px;
+}
+#icons-header img{
+   height: 30%;
+   margin-bottom: 20px;
+}
+#icons-header img:hover{
+   transform: scale(1.2);
+   cursor: pointer;
+}
+
+main{
+   display: flex;
+   justify-content: center;
+   flex-wrap: wrap;
+   width: 100vw;
+   min-width: 600px;
+   min-height: 500px;
+   max-height: min-content;
+   padding: 30px 30px;
+   background-color: coral;
+   font-family: "Permanent Marker", cursive;
+}
+img[src="assets/images/back-hamburguer.jpg"]{
+   
+   width: 400px;
+   border-radius: 30px;
+   box-shadow: 0 0 50px brown;
+   margin: 30px;
+}
+main div{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+}
+#escolha{
+   width: 50vw;
+   min-width: min-content;
+   min-height: 500px;
+   max-height: min-content;
+}
+.opcoes{
+   min-width: min-content;
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+}
+#opcao-de-pao{
+   width: var(--tamanho-post-opcoes);
+   height: var(--tamanho-post-opcoes);
+   margin: 10px;
+   background-color: rgb(39, 35, 35);
+   position: relative;
+   color: white;
+}
+label{
+   font-size: 0.8rem;
+}
+#opcao-de-hamburguer{
+   width: var(--tamanho-post-opcoes);
+   height: var(--tamanho-post-opcoes);
+   margin: 10px;
+   background-color: rgb(39, 35, 35);
+   position: relative;
+   color: white;
+}
+#opcao-de-salada{
+   width: var(--tamanho-post-opcoes);
+   height: var(--tamanho-post-opcoes);
+   margin: 10px;
+   background-color: rgb(39, 35, 35);
+   position: relative;
+   color: white;
+}
+#opcao-de-queijo{
+   width: var(--tamanho-post-opcoes);
+   height: var(--tamanho-post-opcoes);
+   margin: 10px;
+   background-color: rgb(39, 35, 35);
+   position: relative;
+   color: white;
+}
+img[src="assets/images/tachinha.png"]{
+   width: 20px;
+   position: absolute;
+   left: 10px;
+   top: 2px;
+}
+footer{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 180px;
+   min-width: 600px;
+   background-color: rgb(66, 10, 10);
+   color: white;
+}
+footer img{
+   width: 150px;
+   height: 150px;
+   margin: 0px 50px;
+   border-radius: 20px;
+}
+#imagem{
+   width: min-content;
+}
+#resultado{
+   min-width: 480px;
+   max-width: min-content;
+   min-height: 300px;
+   max-height: min-content;
+   background-color: rgb(252, 239, 188);
+   padding: 50px;
+   margin: 20px;
+   position: relative;
+}
+button{
+   width: 100px;
+   height: 40px;
+   margin: 50px;
+   background-color: rgb(66, 10, 10);
+   color: white;
+   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+button:hover{
+   background-color: rgb(94, 64, 64);
+}

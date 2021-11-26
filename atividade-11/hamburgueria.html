@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="style.css">
+   <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+   <title>Document</title>
+</head>
+<body>
+   <header>
+      <div id="titulo">
+         <img src="assets/images/icon-hamburguer.png" alt="">
+         <h1>HambHugor</h1>
+      </div>
+      <div id="icons-header">
+         <img src="assets/images/Facebook.svg" alt="">
+         <img src="assets/images/WhatsApp.svg" alt="">
+         <img src="assets/images/Instagram.svg" alt="">
+         <img src="assets/images/Phone.svg" alt="">
+      </div>
+   </header>
+   <main>
+      <div>
+         <section id="imagem">
+            <img src="assets/images/back-hamburguer.jpg" alt="">
+         </section>
+         <h3>Escolha seu lanche</h3>
+         <section id="escolha">
+            <div>
+               <div class="opcoes">
+                  <div id="opcao-de-pao">
+                     <img src="assets/images/tachinha.png" alt="">
+                     <h3>Opções de Pão</h3>
+                     </br>
+                     <form action="">
+                        <input type="radio" id="pao-frances" name="tipo-pao" value="3" checked>
+                        <label for="pao-frances">Pão Francês</label>
+                        </br>
+                        </br>
+                        <input type="radio" id="pao-australiano" name="tipo-pao" value="8">
+                        <label for="pao-australiano">Pão Australiano</label>
+                        </br>
+                        </br>
+                        <input type="radio" id="pao-brioche" name="tipo-pao" value="6">
+                        <label for="pao-brioche">Pão Brioche</label>
+                     </form>
+                  </div>
+                  <div id="opcao-de-hamburguer">
+                     <img src="assets/images/tachinha.png" alt="">
+                     <h3>Opções de Hamburguer</h3>
+                     </br>
+                     <form action="">
+                        <input type="radio" id="picanha" name="tipo-hamburguer" value="13" checked>
+                        <label for="picanha">Hamburguer de Picanha</label>
+                        </br>
+                        </br>
+                        <input type="radio" id="costela" name="tipo-hamburguer" value="10">
+                        <label for="costela">Hamburguer de Costela</label>
+                        </br>
+                        </br>
+                        <input type="radio" id="vegano" name="tipo-hamburguer" value="12">
+                        <label for="vegano">Hamburguer Vegano</label>
+                     </form>
+                  </div>
+               </div>
+               <div class="opcoes">
+                  <div id="opcao-de-salada">
+                     <img src="assets/images/tachinha.png" alt="">
+                     <h3>Opções de Salada</h3>
+                     </br>
+                     <form action="">
+                        <input type="radio" id="alface" name="tipo-salada" value="1.5" checked>
+                        <label for="alface">Alface</label>
+                        </br>
+                        </br>
+                        <input type="radio" id="tomate" name="tipo-salada" value="1.5">
+                        <label for="tomate">Tomate</label>
+                        </br>
+                        </br>
+                        <input type="radio" id="sem-salada" name="tipo-salada" value="0">
+                        <label for="sem-salada">Sem Salada</label>
+                     </form>
+                  </div>
+                  <div id="opcao-de-queijo">
+                     <img src="assets/images/tachinha.png" alt="">
+                     <h3>Opções de Queijo</h3>
+                     </br>
+                     <form action="">
+                        <input type="radio" id="mussarela" name="tipo-queijo" value="3" checked>
+                        <label for="mussarela">Queijo Mussarela</label>
+                        </br>
+                        </br>
+                        <input type="radio" id="prato" name="tipo-queijo" value="8">
+                        <label for="prato">Queijo Prato</label>
+                        </br>
+                        </br>
+                        <input type="radio" id="cheddar" name="tipo-queijo" value="6">
+                        <label for="cheddar">Queijo Cheddar</label>
+                     </form>
+                  </div>
+               </div>
+               <button type="button" onclick="resultado()">Pedir</button>
+            </div>
+         </section>
+      </div>
+      <section id="resultado">
+         <img src="assets/images/tachinha.png" alt="">
+         </br>
+         
+         <ul id="anotacao">
+            
+         </ul>
+         
+      </section>
+   </main>
+   <footer>
+      <div>
+         <p>© Lanchonete HambHugor. Orgulhosamente criado para sua satisfação.</p>
+         </br>
+         <p>Proprietário: Hugo Saimon</p>
+      </div>
+   </footer>
+   <script src="script.js"></script>
+</body>
+</html>
