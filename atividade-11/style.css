@@ -4,7 +4,7 @@
    box-sizing: border-box;
 }
 :root{
-   --tamanho-post-opcoes: 230px;
+   --tamanho-post-opcoes: 250px;
 }
 body{
    width: 100vw;
@@ -146,7 +146,7 @@ footer img{
    width: min-content;
 }
 #resultado{
-   min-width: 480px;
+   min-width: 520px;
    max-width: min-content;
    min-height: 300px;
    max-height: min-content;
