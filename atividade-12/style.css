@@ -1,0 +1,115 @@
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+header{
+   display: flex;
+   height: 100px;
+   align-items: center;
+   justify-content: center;
+}
+body{
+   font-family: cursive;
+   display: flex;
+   flex-direction: column;
+   width: 100vw;
+   min-width: min-content;
+   align-items: center;
+   background-color: rgb(255, 243, 191);
+}
+#quadro{
+   width: 80vw;
+   min-width: 800px;
+   height: 400px;
+   align-items: center;
+   border: 20px ridge rgb(122, 90, 0);
+   background-color: green;
+   position: relative;
+   color: white;
+}
+#quadro img[src="assets/images/bart-simpsons.png"]{
+   width: 150px;
+   position: absolute;
+   right: 0;
+   bottom: -80px;
+}
+#quadro div{
+   width: 300px;
+   height: min-content;
+   position: absolute;
+   display: flex;
+   flex-direction: column;
+   right: 0;
+   top: 0;
+}
+#quadro div div{
+   all: revert;
+   height: 30px;
+   /* height: min-content; */
+   display: flex;
+   flex-direction: row;
+   justify-content: space-evenly;
+   align-items: center;
+   padding: 10px;
+}
+img[src="assets/images/ferramenta-de-apagar.png"]{
+   width: 30px;
+   height: 30px;
+}
+#num-repeticoes{
+   height: 30px;
+}
+#inputs{
+   width: 400px;
+   padding: 10px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   margin: 50px;
+   border: 2px solid black;
+
+}
+input{
+   display: flex;
+   flex-direction: column;
+   width: 300px;
+   margin: 10px;
+   height: 40px;
+   padding-left: 20px;
+   border-radius: 50px;
+}
+#executar{
+   width: 300px;
+   height: 40px;
+   margin-left: 50px;
+   margin: 10px;
+   background-color: rgb(83, 71, 71);
+   color: white;
+   border-radius: 50px;
+}
+#executar:hover, #limpar:hover{
+   background-color: rgb(252, 82, 53);
+}
+#executar:active, #limpar:active{
+   background-color: rgb(131, 111, 1);
+}
+#limpar{
+   width: 120px;
+   height: 30px;
+   margin-left: 50px;
+   margin: 10px;
+   background-color: rgb(83, 71, 71);
+   color: white;
+   border-radius: 50px;
+}
+#escrevendo{
+   margin: 20px;
+   position: absolute;
+   left: 0;
+   top: 0;
+}
+#escrevendo p{
+   width: 600px;
+   margin-bottom: 8px;
+}

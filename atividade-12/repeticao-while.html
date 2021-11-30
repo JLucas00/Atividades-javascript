@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="style.css">
+
+   <title>Document</title>
+</head>
+<body>
+   <header>
+      <h1>Usando while para repetir frases no quadro do Bart</h1>
+   </header>
+   <main>
+      <section id="quadro">
+         <div id="escrevendo">
+
+         </div>
+         <div>
+            <div>
+               <img src="assets/images/ferramenta-de-apagar.png" alt="">
+               <button id="limpar" onclick="limpar()">Limpar</button>
+            </div>
+            <div>
+               <p> Número de Linhas Escritas: <span id="num-repeticoes"> 0 </span></p>
+            </div>
+            <div>
+               <p>Número de Quadros Apagados: <span id="num-apagados"> 0 </span></p>
+            </div>
+         </div>
+         <img src="assets/images/bart-simpsons.png" alt="">
+      </section>
+      <div id="inputs">
+         <label for="quantidade"> Número de vezes que o Bart deve escrever</label>
+         <input type="number" id="quantidade" placeholder="Digite um número">
+         <button id="executar" type="button" onclick="escrever()">Executar</button>
+      </div>
+   </main>
+
+   <script src="script.js"></script>
+</body>
+</html>

@@ -20,6 +20,7 @@ function resultado(){
    let listSalada="";
    let listQueijo="";
    
+   
    /* soma */
    let valor=parseFloat(pao) + parseFloat(hamburguer) + parseFloat(salada) + parseFloat(queijo);
    
