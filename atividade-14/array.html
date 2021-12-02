@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="style.css">
+   <title>Array</title>
+</head>
+<body>
+   <header>
+      <h1>Ordenação Numérica</h1>
+   </header>
+   <main>
+      <div id="inputs">
+         <div id="entrada-inputs">
+            <h2>Digite os números do vetor:</h2>
+            <div>
+               <h3>1°</h3>
+               <input type="number" id="valor0" value="0">
+            </div>
+            <div>
+               <h3>2°</h3>
+               <input type="number" id="valor1" value="0">
+            </div>
+            <div>
+               <h3>3°</h3>
+               <input type="number" id="valor2" value="0">
+            </div>
+            <div>
+               <h3>4°</h3>
+               <input type="number" id="valor3" value="0">
+            </div>
+         </div>
+         <div id="saida-inputs">
+            <div>
+               <h3>1°</h3>
+               <b id="posicao0"></b>
+            </div>
+            <div>
+               <h3>2°</h3>
+               <b id="posicao1"></b>
+            </div>
+            <div>
+               <h3>3°</h3>
+               <b id="posicao2"></b>
+            </div>
+            <div>
+               <h3>4°</h3>
+               <b id="posicao3"></b>
+            </div>
+         </div>
+         
+      </div>
+      <button type="button" onclick="vetorCreate()">Salvar Números</button>
+      <div id="resultado">
+         <h2 id="titulo-resultado"></h2>
+         <div class="saida-resultado">
+            <h3>1°</h3>
+            <b id="resultado0"></b>
+         </div>
+         <div class="saida-resultado">
+            <h3>2°</h3>
+            <b id="resultado1"></b>
+         </div>
+         <div class="saida-resultado">
+            <h3>3°</h3>
+            <b id="resultado2"></b>
+         </div>
+         <div class="saida-resultado">
+            <h3>4°</h3>
+            <b id="resultado3"></b>
+         </div>
+         <div>
+            <button type="button" onclick="vetorInvert()">Exibir ao Contrário</button>
+            <button type="button" onclick="vetorOrdened()">Ordem Crescente</button>
+         </div>
+      </div>
+   </main>
+   <script src="script.js"></script>
+</body>
+</html>
