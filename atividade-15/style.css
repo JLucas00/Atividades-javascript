@@ -1,0 +1,104 @@
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+body{
+   background-color: darkgray;
+   font-family: 'Holtwood One SC', serif;
+}
+header{
+   width: 70%;
+   height: 100px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+main{ 
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+}
+.linha{
+   display: flex;
+}
+.linha div img{
+   width: 60%;
+}
+.linha div{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin: 5px;
+   width: 12vw;
+   height: 12vw;
+   min-height: 80px;
+   min-width: 80px;
+   background-color: rgb(61, 61, 61);
+}
+.linha div:hover{
+   background-color: rgb(71, 30, 33);
+}
+#jogo{
+   display: flex;
+   flex-direction: column;
+   justify-content: space-around;
+   align-items: center;
+   width: 70%;
+   min-width: 270px;
+}
+#exibicao{
+   width: 30%;
+   padding-top: 30px;
+   min-width: 270px;
+   height: 36vw + 20px;
+   min-height: 350px;
+   margin: 0px;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   align-items: center;
+}
+#exibicao div{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+#resultado img{
+   width: 90px;
+}
+#resultado{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   height: min-content;
+   width: 100%;
+   margin-bottom: 20px;
+}
+#resultado img{
+   margin-bottom: 50px;
+   margin-top: 50px;
+}
+#img-vez-jogo{
+   width: 50px;
+   margin-bottom: 20px;
+}
+button{
+   width: 180px;
+   height: 60px;
+   color: white;
+   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+   background-color: rgb(0, 81, 255);
+   border-radius: 20px;
+   border: 3px solid black;
+   cursor: pointer;
+   box-shadow: 2px 2px 5px black;
+}
+button:hover{
+   background-color: rgb(85, 139, 255);
+}
+button:active{
+   box-shadow: 0px 0px 0px black;
+}

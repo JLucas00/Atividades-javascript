@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="style.css">
+   <link href="https://fonts.googleapis.com/css2?family=Holtwood+One+SC&display=swap" rel="stylesheet">
+   <title>Jogo da Velha</title>
+</head>
+<body>
+   <header>
+      <h1>Jogo da velha</h1>
+   </header>
+   <main>
+      <section id="jogo">
+         <div class="linha">
+            <div id="00" onclick="executar(id)"></div>
+            <div id="01" onclick="executar(id)"></div>
+            <div id="02" onclick="executar(id)"></div>
+         </div>
+         <div class="linha">
+            <div id="10" onclick="executar(id)"></div>
+            <div id="11" onclick="executar(id)"></div>
+            <div id="12" onclick="executar(id)"></div>
+         </div>
+         <div class="linha">
+            <div id="20" onclick="executar(id)"></div>
+            <div id="21" onclick="executar(id)"></div>
+            <div id="22" onclick="executar(id)"></div>
+         </div>
+      </section>
+      <section id="exibicao">
+         <div>
+            <img src="assets/circle-svg-white.svg" id="img-vez-jogo">
+            <h2 id="vez-jogo">Joga</h2>
+         </div>
+         <h2 id="resultado"></h2>
+         <button type="button" onclick="limpar()">Reset</button>
+      </section>
+   </main>
+<script src="script.js"></script>
+</body>
+</html>
