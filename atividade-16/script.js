@@ -130,9 +130,12 @@ function numExecutar(numVoltas){
    document.getElementById("carro-pedro").innerHTML=`${carroPedro.modelo}`;
    document.getElementById("carro-juca").innerHTML=`${carroJuca.modelo}`;
 
-      document.getElementById("vel-edna").innerHTML=`Velocidade Mínima = ${carroEdna.minVelMin} Km/h`;
-      document.getElementById("vel-pedro").innerHTML=`Velocidade Mínima = ${carroPedro.minVelMin} Km/h`;
-      document.getElementById("vel-juca").innerHTML=`Velocidade Mínima = ${carroJuca.minVelMin} Km/h`;
+      document.getElementById("vel1-edna").innerHTML=`Velocidade Mínima = ${carroEdna.minVelMin} Km/h`;
+      document.getElementById("vel1-pedro").innerHTML=`Velocidade Mínima = ${carroPedro.minVelMin} Km/h`;
+      document.getElementById("vel1-juca").innerHTML=`Velocidade Mínima = ${carroJuca.minVelMin} Km/h`;
+      document.getElementById("vel2-edna").innerHTML=`Velocidade Máxima = ${carroEdna.maxVelMax} Km/h`;
+      document.getElementById("vel2-pedro").innerHTML=`Velocidade Máxima = ${carroPedro.maxVelMax} Km/h`;
+      document.getElementById("vel2-juca").innerHTML=`Velocidade Máxima = ${carroJuca.maxVelMax} Km/h`;
 
       document.getElementById("derrap-edna").innerHTML=`Derrapagem: ${carroEdna.derrapagemMin*100}% - ${(carroEdna.derrapagemMax*100).toFixed(2)}%`;
       document.getElementById("derrap-pedro").innerHTML=`Derrapagem: ${carroPedro.derrapagemMin*100}% - ${(carroPedro.derrapagemMax*100).toFixed(2)}%`;
