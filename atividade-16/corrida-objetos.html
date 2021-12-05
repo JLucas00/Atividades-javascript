@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="style.css">
+   <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
+   
+   <title>Corrida</title>
+</head>
+<body>
+   <header>
+      <h1>Corrida maluca</h1>
+   </header>   
+   <section id="pista-de-corrida">
+      <img src="assets/images/pista-corrida.jpg" id="pista" alt="">
+      <div id="posicao1">
+         
+      </div>
+      <div id="posicao2">
+         
+      </div>
+      <div id="posicao3">
+         
+      </div>
+   </section>
+   <main>
+      <form id="form" action="">
+         <div id="inputs">
+            <h3>Modo Normal</h3>
+            <div>
+               <input type="radio" id="corrida-rapida" name="tipo-corrida" value="10" checked>
+               <label for="corrida-rapida">Corrida Rápida (10  voltas)</label>
+            </div>
+            <div>
+               <input type="radio" id="grande-premio" name="tipo-corrida" value="70">
+               <label for="grande-premio">Grande Prêmio (70 voltas)</label>
+               
+            </div>
+            <div>
+               <input type="radio" id="enduro" name="tipo-corrida" value="160">
+               <label for="enduro">Enduro (160 voltas)</label>
+            </div>
+            <button type="button" onclick="executarNormal()">Correr</button>
+         </div>
+         <div id="inputs-desafio">
+            <h3>Modo Desafio</h3>
+            <div>
+               <p>Digite o número de voltas:</p>
+               <input type="number" id="num-voltas" placeholder="Número de voltas" value="0">
+            </div>
+            <button type="button" onclick="executarDesafio()">Correr</button>
+         </div>
+      </form>
+      
+      <section id="legenda1">
+         <h3>Participantes</h3>
+         <div id="legenda2">
+            <div>
+               <div id="edna">
+                  <img src="assets/images/yellow-race-car.svg" alt="">
+                  <h4>Edna</h4>
+                  <h4 id="classificacao-edna"></h4>
+                  <h4 id="score-edna"></h4>
+               </div>
+               <div class="caracteristica">
+                  <h3 id="carro-edna"></h3>
+                  <p id="vel-edna"></p>
+                  <p id="derrap-edna"></p>
+               </div>
+            </div>
+            <div>
+               <div id="pedro">
+                  <img src="assets/images/red-race-car.svg" alt="">
+                  <h4>Pedro</h4>
+                  <h4 id="classificacao-pedro"></h4>
+                  <h4 id="score-pedro"></h4>
+               </div>
+               <div class="caracteristica">
+                  <h3 id="carro-pedro"></h3>
+                  <p id="vel-pedro"></p>
+                  <p id="derrap-pedro"></p>
+               </div>
+            </div>
+            <div>
+               <div id="juca">
+                  <img src="assets/images/blue-race-car.svg" alt="">
+                  <h4>Juca</h4>
+                  <h4 id="classificacao-juca"></h4>
+                  <h4 id="score-juca"></h4>
+               </div>
+               <div class="caracteristica">
+                  <h3 id="carro-juca"></h3>
+                  <p id="vel-juca"></p>
+                  <p id="derrap-juca"></p>
+               </div>
+            </div>
+         </div>
+
+      </section>
+      
+   </main>
+   <script src="script.js"></script>
+</body>
+</html>
