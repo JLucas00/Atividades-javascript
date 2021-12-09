@@ -1,18 +1,39 @@
-const carroPopular={modelo: "Carro Popular", minVelMin:110, maxVelMin:130, minVelMax:180, maxVelMax:200, derrapagemMin:0.03, derrapagemMax:0.04}
-const carroSport={modelo: "Carro Sport", minVelMin:125, maxVelMin:145, minVelMax:195, maxVelMax:215, derrapagemMin:0.02, derrapagemMax:0.03}
-const carroSuperSport={modelo: "Carro Super Sport", minVelMin:140, maxVelMin:160, minVelMax:210, maxVelMax:230, derrapagemMin:0.01, derrapagemMax:(0.0175).toFixed(4)}
+const carro={
+   carroPopular:{
+      modelo: "Carro Popular",
+      velMin:{min:110, max:130},
+      velMax:{min:180, max:200},
+      derrapagem:{min:0.03 , max: 0.04}
+      
+   },
+   carroSport:{
+      modelo: "Carro Sport",
+      velMin:{min:125, max:145},
+      velMax:{min:195, max:215},
+      derrapagem:{min:0.02 , max: 0.03}
+   },
+   carroSuperSport:{
+      modelo: "Carro Super Sport", 
+      velMin:{min:140, max:160},
+      velMax:{min:210, max:230},
+      derrapagem:{min:0.01 , max: 0.0175}
+   }
+
+}
+
+
 const tipoCarro=[];
 
 for (i = 0 ; i < 20 ; i++){
    if (i<12){
-      tipoCarro[i]=carroPopular;
+      tipoCarro[i]=carro.carroPopular;
    }else if(i<19){
-      tipoCarro[i]=carroSport;
+      tipoCarro[i]=carro.carroSport;
    }else{
-      tipoCarro[i]=carroSuperSport;
+      tipoCarro[i]=carro.carroSuperSport;
    }
 }
-
+console.log(tipoCarro)
 function numeroAleatorio(min, max) {
    return Math.random() * (max - min) + min;
 }
@@ -30,21 +51,23 @@ function numExecutar(numVoltas){
    const carroPedro=tipoCarro[numeroAleatorioInteiro(0, tipoCarro.length-1)];
    const carroEdna=tipoCarro[numeroAleatorioInteiro(0, tipoCarro.length-1)];
    const carroJuca=tipoCarro[numeroAleatorioInteiro(0, tipoCarro.length-1)];
+   console.log(carroPedro.velMin.min)
 
    for(let i = 0 ; i < numVoltas ; i++){
-      let minVelPedro=numeroAleatorio(carroPedro.minVelMin, carroPedro.maxVelMin);
-      let maxVelPedro=numeroAleatorio(carroPedro.minVelMax, carroPedro.maxVelMax);
-      let derrapagemPedro=numeroAleatorio(carroPedro.derrapagemMin, carroPedro.derrapagemMax);
+
+      let minVelPedro=numeroAleatorio(carroPedro.velMin.min, carroPedro.velMin.max);
+      let maxVelPedro=numeroAleatorio(carroPedro.velMax.min, carroPedro.velMax.max);
+      let derrapagemPedro=numeroAleatorio(carroPedro.derrapagem.min, carroPedro.derrapagem.max);
       let velPedro=numeroAleatorio(minVelPedro, maxVelPedro);
 
-      let minVelEdna=numeroAleatorio(carroEdna.minVelMin, carroEdna.maxVelMin);
-      let maxVelEdna=numeroAleatorio(carroEdna.minVelMax, carroEdna.maxVelMax);
-      let derrapagemEdna=numeroAleatorio(carroEdna.derrapagemMin, carroEdna.derrapagemMax);
+      let minVelEdna=numeroAleatorio(carroEdna.velMin.min, carroEdna.velMin.max);
+      let maxVelEdna=numeroAleatorio(carroEdna.velMax.min, carroEdna.velMax.max);
+      let derrapagemEdna=numeroAleatorio(carroEdna.derrapagem.min, carroEdna.derrapagem.max);
       let velEdna=numeroAleatorio(minVelEdna, maxVelEdna);
 
-      let minVelJuca=numeroAleatorio(carroJuca.minVelMin, carroJuca.maxVelMin);
-      let maxVelJuca=numeroAleatorio(carroJuca.minVelMax, carroJuca.maxVelMax);
-      let derrapagemJuca=numeroAleatorio(carroJuca.derrapagemMin, carroJuca.derrapagemMax);
+      let minVelJuca=numeroAleatorio(carroJuca.velMin.min, carroJuca.velMin.max);
+      let maxVelJuca=numeroAleatorio(carroJuca.velMax.max, carroJuca.velMax.max);
+      let derrapagemJuca=numeroAleatorio(carroJuca.derrapagem.min, carroJuca.derrapagem.max);
       let velJuca=numeroAleatorio(minVelJuca, maxVelJuca);
 
       velPedro=velPedro*(1-derrapagemPedro);
@@ -130,16 +153,16 @@ function numExecutar(numVoltas){
    document.getElementById("carro-pedro").innerHTML=`${carroPedro.modelo}`;
    document.getElementById("carro-juca").innerHTML=`${carroJuca.modelo}`;
 
-      document.getElementById("vel1-edna").innerHTML=`Velocidade Mínima = ${carroEdna.minVelMin} Km/h`;
-      document.getElementById("vel1-pedro").innerHTML=`Velocidade Mínima = ${carroPedro.minVelMin} Km/h`;
-      document.getElementById("vel1-juca").innerHTML=`Velocidade Mínima = ${carroJuca.minVelMin} Km/h`;
-      document.getElementById("vel2-edna").innerHTML=`Velocidade Máxima = ${carroEdna.maxVelMax} Km/h`;
-      document.getElementById("vel2-pedro").innerHTML=`Velocidade Máxima = ${carroPedro.maxVelMax} Km/h`;
-      document.getElementById("vel2-juca").innerHTML=`Velocidade Máxima = ${carroJuca.maxVelMax} Km/h`;
+   document.getElementById("vel1-edna").innerHTML=`Velocidade Mínima = ${carroEdna.velMin.min} Km/h`;
+   document.getElementById("vel1-pedro").innerHTML=`Velocidade Mínima = ${carroPedro.velMin.min} Km/h`;
+   document.getElementById("vel1-juca").innerHTML=`Velocidade Mínima = ${carroJuca.velMin.min} Km/h`;
+   document.getElementById("vel2-edna").innerHTML=`Velocidade Máxima = ${carroEdna.velMax.max} Km/h`;
+   document.getElementById("vel2-pedro").innerHTML=`Velocidade Máxima = ${carroPedro.velMax.max} Km/h`;
+   document.getElementById("vel2-juca").innerHTML=`Velocidade Máxima = ${carroJuca.velMax.max} Km/h`;
 
-      document.getElementById("derrap-edna").innerHTML=`Derrapagem: ${carroEdna.derrapagemMin*100}% - ${(carroEdna.derrapagemMax*100).toFixed(2)}%`;
-      document.getElementById("derrap-pedro").innerHTML=`Derrapagem: ${carroPedro.derrapagemMin*100}% - ${(carroPedro.derrapagemMax*100).toFixed(2)}%`;
-      document.getElementById("derrap-juca").innerHTML=`Derrapagem: ${carroJuca.derrapagemMin*100}% - ${(carroJuca.derrapagemMax*100).toFixed(2)}%`;
+   document.getElementById("derrap-edna").innerHTML=`Derrapagem: ${carroEdna.derrapagem.min*100}% - ${(carroEdna.derrapagem.max*100).toFixed(2)}%`;
+   document.getElementById("derrap-pedro").innerHTML=`Derrapagem: ${carroPedro.derrapagem.min*100}% - ${(carroPedro.derrapagem.max*100).toFixed(2)}%`;
+   document.getElementById("derrap-juca").innerHTML=`Derrapagem: ${carroJuca.derrapagem.min*100}% - ${(carroJuca.derrapagem.max*100).toFixed(2)}%`;
 }
 function executarNormal(){
    let numVoltas = document.querySelector('input[name="tipo-corrida"]:checked').value;
