@@ -102,7 +102,7 @@ function numExecutar(numVoltas){
       let velEdna=numeroAleatorio(minVelEdna, maxVelEdna);
 
       let minVelJuca=(1+0.01*Juca.lvl)*numeroAleatorio(carroJuca.velMin.min, carroJuca.velMin.max);
-      let maxVelJuca=(1+0.01*Juca.lvl)*numeroAleatorio(carroJuca.velMax.max, carroJuca.velMax.max);
+      let maxVelJuca=(1+0.01*Juca.lvl)*numeroAleatorio(carroJuca.velMax.min, carroJuca.velMax.max);
       let derrapagemJuca=numeroAleatorio(carroJuca.derrapagem.min, carroJuca.derrapagem.max);
       let velJuca=numeroAleatorio(minVelJuca, maxVelJuca);
 
