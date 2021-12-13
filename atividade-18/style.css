@@ -1,0 +1,65 @@
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+header{
+   font-family: "rock salt", sans-serif;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+}
+main{
+   font-family: spinnaker;
+   padding: 30px;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   gap: 50px;
+
+}
+#forms{
+   display: flex;
+   flex-direction: column;
+   justify-content: space-around;
+   padding: 10px;
+   width: min-content;
+   height: 350px;
+   background-color: burlywood;
+   border-radius: 20px;
+}
+#name, #date, #debt{
+   width: 30vw;
+   height: 40px;
+   min-width: 250px;
+   border-radius: 20px;
+   padding-left: 20px;
+   padding-right: 20px;
+}
+button{
+   align-self: center;
+   width: 60px;
+   height: 30px;
+   background-color: rgb(129, 110, 86);
+   color: white;
+}
+#alert{
+   color: red;
+   align-self: center;
+}
+#table{
+   width: 40vw;
+   min-width: 400px;
+   min-height: 300px;
+   max-height: min-content;
+   padding: 10px;
+   background-color: burlywood;
+   border-radius: 20px;
+   overflow-x: auto;
+}
+
+th, td{
+   font-size: 14px;
+   border: 2px solid black;
+}
