@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="style.css">
+   <link href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Spinnaker&display=swap" rel="stylesheet">
+
+   <title>Loja de Joana</title>
+</head>
+<body>
+   <header>
+      <h1>Bem Vindo a Loja da Joana</h1>
+   </header>
+   <main>
+      <div id="forms">
+         
+            <p>Nome do cliente:</p>
+            <input type="text" id="name">
+         
+         
+            <p>Data de Vencimento:</p>
+            <input type="date" id="date">
+         
+         
+            <p>Valor da compra:</p>
+            <input type="number" id="debt">
+            <div>
+               <button type="button" onclick="calculate()">Enviar</button>
+               <button type="button" onclick="clean()">Limpar</button>
+            </div>
+            <h3>Agrupar</h3>
+            <div>
+               <button type="button" id="botao2" onclick="agruparNome()">Agrupar por nome</button>
+               <button type="button" id="botao2" onclick="agruparData()">Agrupar por data</button>
+            </div>
+            <strong id="alert"></strong>
+      </div>
+      <div id="table">
+         <table id="tabela">
+            <tr>
+               <th>Nome do Cliente</th>
+               <th>Data de Vencimento</th>
+               <th>Valor da Compra</th>
+               <th>Atraso (dias)</th>
+               <th>Juros</th>
+               <th>Valor com Juros</th>
+            </tr>
+
+         </table>
+      </div>
+   </main>
+   <script src="script.js"></script>
+</body>
+</html>
