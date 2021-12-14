@@ -14,7 +14,7 @@ function calculate(){
       client = {
          cname : document.getElementById("name").value,
          duedate : document.getElementById("date").value,
-         debt : document.getElementById("debt").value
+         debt : Number(document.getElementById("debt").value)
       }
       memory.push(client);
  
@@ -25,26 +25,42 @@ function calculate(){
    
       
       let diference = present_date.getTime() - duedate.getTime();
-      diference = parseInt(diference/(1000*3600*24));
+      diference = parseInt(diference/(1000*3600*24), 10);
       
-   
+      
       if (diference > 0){
          delay[cont] = diference;
          juros[cont] = 0.02+0.001*delay[cont];
-         valor[cont] = (juros[cont]*client.debt);
+         valor[cont] = client.debt + juros[cont]*client.debt;
       }else{
          juros[cont] = 0;
          delay[cont] = "Dentro do prazo";
          valor[cont] = client.debt;
       }
       
+      let anotation = memory.map(function(item, cont){
+         return `<tr>
+                     <td>${item.cname}</td>
+                     <td>${item.duedate}</td>
+                     <td>${formateGrana(item.debt)}</td>
+                     <td>${delay[cont]}</td>
+                     <td>${(juros[cont])*100} % </td>
+                     <td>${formateGrana(valor[cont])}</td>
+                </tr>`;
       
-      
+      });
 
-      document.querySelector("#tabela").innerHTML += anotation;
-      console.log(anotation);
-      
+      anotation.unshift(
+         `<tr>
+            <th>Nome do Cliente</th>
+            <th>Data de Vencimento</th>
+            <th>Valor da Compra</th>
+            <th>Atraso (dias)</th>
+            <th>Juros</th>
+            <th>Valor com Juros</th>
+         </tr>`)
 
+      document.getElementById("tabela").innerHTML = anotation.join("");
       cont++;
 
    }else{
@@ -52,14 +68,12 @@ function calculate(){
    }
    
 }
-let anotation = memory.map(function(item, index){
-   return `<tr>
-               <td>${memory[index].cname}</td>
-               <td>${memory[index].duedate}</td>
-               <td>${memory[index].debit}</td>
-               <td>${delay[cont]}</td>
-               <td>${juros[cont]}</td>
-               <td>${valor[cont]}</td>
-          </tr>`;
 
-});
+function formateGrana(valor){
+   return valor.toLocaleString('pt-br', {
+      style: 'currency',
+      currency: 'BRL'
+    });
+   
+}
+

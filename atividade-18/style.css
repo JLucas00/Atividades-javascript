@@ -58,8 +58,16 @@ button{
    border-radius: 20px;
    overflow-x: auto;
 }
+#tabela{
+
+   display: flex;
+   width: 100%;
+   border-collapse: collapse;
+   flex-direction: column;
+}
 
 th, td{
+   
    font-size: 14px;
    border: 2px solid black;
 }
