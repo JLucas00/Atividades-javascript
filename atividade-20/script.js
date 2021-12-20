@@ -26,7 +26,7 @@ function calculate(){
       
       let diference = present_date.getTime() - duedate.getTime();
       diference = parseInt(diference/(1000*3600*24), 10);
-      
+      let titulo = "Lista de Clientes"
       
       if (diference > 0){
          client.delay = diference;
@@ -51,23 +51,29 @@ function calculate(){
       
       });
 
-      anotation.unshift(
-         `<tr>
-            <th>Nome do Cliente</th>
-            <th>Data de Vencimento</th>
-            <th>Valor da Compra</th>
-            <th>Atraso (dias)</th>
-            <th>Juros</th>
-            <th>Valor com Juros</th>
-         </tr>`)
-
-      document.getElementById("tabela").innerHTML = anotation.join("");
+      impressTable(anotation, titulo);
       cont++;
 
    }else{
       document.getElementById("alert").innerHTML = `Preencha todos os campos`;
    }
    
+}
+
+function impressTable(anotation, titulo){
+   anotation.unshift(
+
+      `<h2> ${titulo} </h2>
+      <tr>
+         <th>Nome do Cliente</th>
+         <th>Data de Vencimento</th>
+         <th>Valor da Compra</th>
+         <th>Atraso (dias)</th>
+         <th>Juros</th>
+         <th>Valor com Juros</th>
+      </tr>`)
+
+   document.getElementById("tabela").innerHTML = anotation.join("");
 }
 
 function formateGrana(valor){
@@ -112,6 +118,7 @@ function agruparNome(){
    let objectName = agruparPor(memory,"cname");
    arrayName = Object.values(objectName);
    let anotation = [];
+   let titulo = "Agrupar por Nome"
 
    arrayName.forEach(function(item, index){
       item.forEach((element)=>{
@@ -129,17 +136,8 @@ function agruparNome(){
             <th>${formateGrana(soma)}</th>
          </tr>`);
    });
-   anotation.unshift(
-      `<h2>Agrupamento por nome</h2>
-      <tr>
-         <th>Nome do Cliente</th>
-         <th>Data de Vencimento</th>
-         <th>Valor da Compra</th>
-         <th>Atraso (dias)</th>
-         <th>Juros</th>
-         <th>Valor com Juros</th>
-      </tr>`)
-   document.getElementById("tabela").innerHTML = anotation.join("");
+
+   impressTable(anotation, titulo);
    
 }
 function agruparData(){
@@ -147,6 +145,7 @@ function agruparData(){
    arrayData = Object.values(objectData);
    let soma=0;
    let anotation = [];
+   let titulo = "Agrupar por Data"
 
    arrayData.forEach(function(item, index){
       item.forEach((element)=>{
@@ -164,17 +163,7 @@ function agruparData(){
             <th>${formateGrana(soma)}</th>
          </tr>`);
    });
-   anotation.unshift(
-      `<h2>Agrupamento por data</h2>
-      <tr>
-         <th>Nome do Cliente</th>
-         <th>Data de Vencimento</th>
-         <th>Valor da Compra</th>
-         <th>Atraso (dias)</th>
-         <th>Juros</th>
-         <th>Valor com Juros</th>
-      </tr>`)
-   document.getElementById("tabela").innerHTML = anotation.join("");
+   impressTable(anotation, titulo);
 }
 
 function agruparPor(objetoArray, propriedade) {
@@ -200,26 +189,15 @@ function filterDate(){
    dateStart = document.getElementById("dateStart").value;
    dateEnd = document.getElementById("dateEnd").value;
    let anotation = [];
-
+   let titulo = "Filtrar por Data"
    let filtered = memory.filter(betwenDate);
    
    filtered.forEach((element)=>{
       anotation.push(escreveOrdened(element));
    });
 
-   anotation.unshift(
-      `<h2>Filtro por data</h2>
-      <tr>
-         <th>Nome do Cliente</th>
-         <th>Data de Vencimento</th>
-         <th>Valor da Compra</th>
-         <th>Atraso (dias)</th>
-         <th>Juros</th>
-         <th>Valor com Juros</th>
-      </tr>`)
+   impressTable(anotation, titulo);
 
-   document.getElementById("tabela").innerHTML = anotation.join("");
-   console.log(filtered);
 }
 
 function filterValue(){
@@ -228,22 +206,12 @@ function filterValue(){
    valorMin = Number(valorMin);
    valorMax = Number(valorMax);
    let anotation = [];
-
+   let titulo = "Filtar por Valor"
    let filtered = memory.filter(betwenValue);
 
    filtered.forEach((element)=>{
       anotation.push(escreveOrdened(element));
    });
 
-   anotation.unshift(
-      `<h2>Filtro por valor</h2>
-      <tr>
-         <th>Nome do Cliente</th>
-         <th>Data de Vencimento</th>
-         <th>Valor da Compra</th>
-         <th>Atraso (dias)</th>
-         <th>Juros</th>
-         <th>Valor com Juros</th>
-      </tr>`)
-   document.getElementById("tabela").innerHTML = anotation.join("");
+   impressTable(anotation, titulo);
 }

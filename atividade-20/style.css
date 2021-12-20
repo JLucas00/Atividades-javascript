@@ -74,7 +74,8 @@ button{
    overflow-x: auto;
 }
 #tabela{
-
+   justify-content: center;
+   align-items: center;
    display: flex;
    width: 100%;
    border-collapse: collapse;
