@@ -104,6 +104,10 @@ function escreveOrdened(element){
              </tr>`;
 }
 
+function somagrupo(total, num){
+   return total+num.valor;
+}
+
 function agruparNome(){
    let objectName = agruparPor(memory,"cname");
    arrayName = Object.values(objectName);
@@ -113,9 +117,21 @@ function agruparNome(){
       item.forEach((element)=>{
          anotation.push(escreveOrdened(element));
       });
+      let soma = item.reduce(somagrupo, 0);
+
+      anotation.push(
+         `<tr>
+            <th>Total</th>
+            <th>-</th>
+            <th>-</th>
+            <th>-</th>
+            <th>-</th>
+            <th>${formateGrana(soma)}</th>
+         </tr>`);
    });
    anotation.unshift(
-      `<tr>
+      `<h2>Agrupamento por nome</h2>
+      <tr>
          <th>Nome do Cliente</th>
          <th>Data de Vencimento</th>
          <th>Valor da Compra</th>
@@ -129,15 +145,28 @@ function agruparNome(){
 function agruparData(){
    let objectData = agruparPor(memory, "duedate");
    arrayData = Object.values(objectData);
+   let soma=0;
    let anotation = [];
 
    arrayData.forEach(function(item, index){
       item.forEach((element)=>{
          anotation.push(escreveOrdened(element));
       }); 
+      let soma = item.reduce(somagrupo, 0);
+
+      anotation.push(
+         `<tr>
+            <th>Total</th>
+            <th>-</th>
+            <th>-</th>
+            <th>-</th>
+            <th>-</th>
+            <th>${formateGrana(soma)}</th>
+         </tr>`);
    });
    anotation.unshift(
-      `<tr>
+      `<h2>Agrupamento por data</h2>
+      <tr>
          <th>Nome do Cliente</th>
          <th>Data de Vencimento</th>
          <th>Valor da Compra</th>
