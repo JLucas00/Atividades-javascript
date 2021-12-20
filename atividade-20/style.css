@@ -1,0 +1,102 @@
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+header{
+   font-family: "rock salt", sans-serif;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+}
+main{
+   font-family: spinnaker;
+   padding: 30px;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   gap: 50px;
+
+}
+#forms{
+   display: flex;
+   flex-direction: column;
+   justify-content: space-around;
+   padding: 10px;
+   width: min-content;
+   height: min-content;
+   padding: 20px;
+   background-color: burlywood;
+   border-radius: 20px;
+}
+#forms > div{
+   display: flex;
+   align-items: center;
+   justify-content: space-evenly;
+   margin: 10px 0 10px 0;
+   padding: 10px 0 10px 0;
+   border-top: 2px solid black;
+   border-bottom:  2px solid black;
+}
+#name, #date, #debt{
+   width: 30vw;
+   height: 40px;
+   min-width: 250px;
+   border-radius: 20px;
+   padding-left: 20px;
+   padding-right: 20px;
+}
+button{
+   align-self: center;
+   width: 60px;
+   height: 30px;
+   background-color: rgb(129, 110, 86);
+   color: white;
+   border-radius: 5px;
+}
+#botao2{
+   width: 80px;
+   height: 40px;
+}
+#alert{
+   color: red;
+   align-self: center;
+}
+#table{
+   width: 50vw;
+   min-width: 400px;
+   min-height: 300px;
+   max-height: min-content;
+   padding: 10px;
+   background-color: burlywood;
+   border-radius: 20px;
+   overflow-x: auto;
+}
+#tabela{
+
+   display: flex;
+   width: 100%;
+   border-collapse: collapse;
+   flex-direction: column;
+}
+
+th, td{
+   flex: 1;
+   padding: 10px;
+   font-size: 14px;
+   border: 2px solid black;
+}
+#dateStart, #dateEnd, #valorMin, #valorMax{
+   width: 15vw;
+   height: 40px;
+   min-width: 120px;
+   border-radius: 20px;
+   padding-left: 20px;
+   padding-right: 20px;
+}
+.filtro{
+   display: flex;
+   flex-direction: column;
+
+}
