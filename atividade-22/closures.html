@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="style.css">
+   
+   <title>Closures</title>
+</head>
+<body>
+   <header>
+      <h1>Closures</h1>
+   </header>
+   <nav>
+      <div>
+         <a href="#question1">Questão 1</a>
+      </div>
+      <div>
+         <a href="#question2">Questão 2</a>
+      </div>
+   </nav>
+   <main>
+      <section id="question1">
+         <h2>Questão 1</h2>
+         <strong>Multiplicação por 5</strong>
+         <label for="multiply">Digite um número inteiro:</label>
+         <br/>
+         <input type="number" id="number"/>
+         <button type="button" id="calculate" onclick="multiplyBy5()"> Calulcar </button>
+         <div id="result-multiply">
+            
+         </div>
+      </section>
+      <section id="question2">
+         <h2>Questão 2</h2>
+         <div id="togglebar">
+            <h3>Mudar o tamanho da letra:</h3>
+            <button type="button" onclick="decrementSize()">Diminuir tamanho</button>
+            <button type="button" onclick="incrementSize()">Aumentar tamanho</button>
+         </div>
+         <div id="history">
+            <h3>Conto do Pastorzinho</h3>
+            <br/>
+            <p>Era uma vez um pastorzinho, que se tornou muito famoso na cidade pelas sábias respostas que dava a qualquer pergunta.</p>
+            <p>Até mesmo o rei ouviu falar nele e, não acreditando no que diziam, mandou chamá-lo à sua presença.</p>
+            <p>- Se souber responder corretamente as três perguntas que vou te fazer, eu te adotarei como filho e você passará a morar comigo aqui no palácio.</p>
+               
+            <p>- Quais são as perguntas? - perguntou o rapaz.</p>
+               
+            <p>O rei perguntou:</p>
+            <p>- A primeira é esta: quantas gotas de água há no mar?</p>
+            <p>O pastorzinho respondeu:</p>
+            <p>- Majestade, feche todos os rios que desaguam no mar e eu direi quantas gotas de água há nele.</p>
+            <p>O rei continuou:</p>
+            <p>- A segunda pergunta é esta: quantas estrelas há no céu?</p>
+            <p>O pastorzinho respondeu:</p>
+            <p>- Me empreste, por favor, uma grande folha de papel em branco.</p>
+            <p>Depois, com a pena, fez tantos pontinhos sobre o papel que era quase impossível distingui-lo e muito mais impossível contá-los. E disse:</p>
+            <p>- No céu há tantas estrelas quantos pontos há neste papel; conte e eu te direi.</p>
+            <p>Mas ninguém foi capaz de fazer a conta. O rei tornou a dizer:</p>
+            <p>- A terceira pergunta é: quantos segundos tem a eternidade?</p>
+            <p>O pastorzinho disse:</p>
+            <p>- Na Pomerânia oriental há a Montanha de Diamante, que tem uma hora de altura, uma hora de largura e uma hora de profundidade; a cada cem anos vai um passarinho afiar o biquinho nela. Quando ele tiver furado toda a montanha, então terá passado um segundo da eternidade.</p>
+            <p>O rei então exclamou:</p>
+            <p>- Você respondeu as minhas perguntas com muita sabedoria; de hoje em diante vai ficar morando comigo aqui no castelo e será adotado por mim como filho.</p>
+               
+         </div>
+      </section>
+
+   </main>
+   
+   <script src="script.js"></script>
+</body>
+</html>
