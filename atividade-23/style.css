@@ -1,0 +1,66 @@
+*{
+   margin: 0;
+   padding: 0;
+}
+
+header{
+   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 100px;
+}
+main{
+   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-around;
+   gap: 50px;
+}
+#factorial{
+   display: flex;
+   flex-direction: column;
+   gap: 20px;
+   align-items: center;
+   background-color: aqua;
+   width: 30vw;
+   min-width: 300px;
+   height: 300px;
+   border: 2px solid black;
+   border-radius: 25px;
+   box-shadow: 0 0 20px 0 black;
+}
+#factorial h2{
+   margin-top: 20px;
+}
+#factorial h3{
+   margin-top: 20px;
+}
+
+#factorialNumber{
+   width: 80px;
+   height: 18px;
+}
+#matriz{
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   align-items: center;
+   background-color: blueviolet;
+   width: 30vw;
+   min-width: 300px;
+   height: 300px;
+   border: 2px solid black;
+   border-radius: 25px;
+   box-shadow: 0 0 20px 0 black;
+}
+#matriz h2{
+   margin-top: 20px;
+}
+#factorialCalculate{
+   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+   padding: 5px;
+   background-color: cornsilk;
+   border-radius: 10px;
+   margin-bottom: 40px;
+}
