@@ -45,22 +45,17 @@ function factorialValidation(value){
 
 
 
-const matriz = [
-   [1, 31, 4, 7, 9],
-   [10, 3, 7, 0, 2],
-   [9, 4, 13, 7, 8],
-   [12, 1, 0, 5, 2]
-];
+
 let matrizCopied=[[]];
 
-function copyMatriz(contRow, matrizRow){
+function copyMatriz(matriz, contRow, matrizRow){
    
    if(contRow < matrizRow){
 
       matrizCopied[contRow] = matriz[contRow];
       document.getElementById("matrizResponse").innerHTML += `<h3> ${matrizCopied[contRow]} </h3>`
       contRow += 1
-      copyMatriz(contRow, matrizRow);
+      copyMatriz(matriz, contRow, matrizRow);
       
    }else{
       console.log(matrizCopied);
@@ -70,13 +65,21 @@ function copyMatriz(contRow, matrizRow){
 
 function printMatriz(){
 
+
+   const matriz = [
+      [1, 31, 4, 7, 9],
+      [10, 3, 7, 0, 2],
+      [9, 4, 13, 7, 8],
+      [12, 1, 0, 5, 2]
+   ];
+   
    let contRow = 0;
-   let contColumn = 0;
    const matrizRow = matriz.length;
-   const matrizColumn = matriz[0].length;
+
+   
    console.log(matriz)
 
-   copyMatriz(contRow, matrizRow);
+   copyMatriz(matriz, contRow, matrizRow);
 
    
 
