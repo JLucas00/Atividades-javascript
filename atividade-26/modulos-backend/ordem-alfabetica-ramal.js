@@ -1,4 +1,6 @@
-function ordenedRamal(funcionarios){
+const funcionarios = require("./database");
+
+function ordenedRamal(){
    
    const  worker = funcionarios.map((item) => {
       return item.nome;
@@ -22,4 +24,4 @@ function ordenedRamal(funcionarios){
    return workerOrdenedRamal;
 };
 
-export {ordenedRamal};
+module.exports = ordenedRamal;

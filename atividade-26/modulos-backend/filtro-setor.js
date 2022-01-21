@@ -1,4 +1,6 @@
-function filterForSector(funcionarios, sector){
+const funcionarios = require("./database");
+
+function filterForSector(sector){
 
    const  workerSector = funcionarios.filter((item) => {
 
@@ -18,4 +20,4 @@ function filterForSector(funcionarios, sector){
    return worker;
 };
 
-export {filterForSector};
+module.exports = filterForSector;

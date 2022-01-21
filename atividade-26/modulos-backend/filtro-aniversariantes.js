@@ -1,4 +1,6 @@
-function filterForDate(funcionarios, month){
+const funcionarios = require("./database");
+
+function filterForDate(month){
 
    const  aniversariantesMes = funcionarios.filter((item) => {
 
@@ -18,4 +20,4 @@ function filterForDate(funcionarios, month){
    return aniversariantesNome;
 };
 
-export {filterForDate};
+module.exports = filterForDate;
