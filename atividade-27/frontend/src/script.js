@@ -5,7 +5,6 @@ function enviarDados(){
    const nome = document.getElementById("nome").value;
    const data = document.getElementById("data").value;
    const email = document.getElementById("email").value;
-   const matricula = document.getElementById("matricula").value;
    const ramal = document.getElementById("ramal").value;
    const setor = document.getElementById("setor").value;
 
@@ -16,7 +15,6 @@ function enviarDados(){
          nome: nome,
          data: data,
          email: email,
-         matricula: matricula,
          ramal: ramal,
          setor: setor
       })
@@ -112,7 +110,37 @@ function aplicacaoSetor() {
 
 function aplicacaoRamal() {
 
-   fetch(`${url}/funcionarios/ramal?ramal=${ramal}`)
+   fetch(`${url}/funcionarios/ramal`)
+      .then(
+         function (response) {
+            if (response.status !== 200) {
+               console.log('Looks like there was a problem. Status Code: ' +
+                  response.status);
+               return;
+            }
+
+            // Examine the text in the response
+            response.json().then(function (data) {
+            
+               document.getElementById("resultado").innerHTML = ``;
+               document.getElementById("resultado").innerHTML = `<tr> <th>Nome</th> <th>Ramal</th></tr>`;
+               data.forEach(element => {
+                  document.getElementById("resultado").innerHTML += `<tr> <td>${element.name}</td> <td>${element.extension}</td> </tr>`;
+               });
+
+               
+            });
+         }
+      )
+      .catch(function (err) {
+         console.log('Fetch Error :-S', err);
+      });
+
+}
+
+function start() {
+
+   fetch(`${url}/start`)
       .then(
          function (response) {
             if (response.status !== 200) {
@@ -124,13 +152,12 @@ function aplicacaoRamal() {
             // Examine the text in the response
             response.json().then(function (data) {
 
-               document.getElementById("resultado").innerHTML = ``;
-               document.getElementById("resultado").innerHTML = `<tr> <th>Nome</th> <th>Ramal</th></tr>`;
-               data.forEach(element => {
-                  document.getElementById("resultado").innerHTML += `<tr> <td>${element.nome}</td> <td>${element.ramal}</td> </tr>`;
-               });
 
-               console.log(data);
+               data.forEach(element => {
+                  document.getElementById("pesquisaSetor").innerHTML += `<option value="${element}">${element}</option>`
+                  document.getElementById("setor").innerHTML += `<option value="${element}">${element}</option>`
+               })
+               
             });
          }
       )
@@ -138,9 +165,5 @@ function aplicacaoRamal() {
          console.log('Fetch Error :-S', err);
       });
 
-
-
-
 }
-
-
+start();

@@ -11,7 +11,7 @@ function filterForDate(month){
 
    const  aniversariantesMes = funcionarios.filter((item) => {
 
-      if(parseInt(item.dataNascimento.split("-")[1], 10) === month){
+      if(parseInt(item.birthDay.split("-")[1], 10) === month){
          return true;
       }else{
          return false;
@@ -20,10 +20,9 @@ function filterForDate(month){
    });
 
    const aniversariantesNome = aniversariantesMes.map((item) =>{
-      return item.nome;
+      return item.name;
    });
 
-   console.log(aniversariantesNome);
    return aniversariantesNome;
 };
 

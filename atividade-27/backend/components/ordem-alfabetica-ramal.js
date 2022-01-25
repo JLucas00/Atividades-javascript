@@ -8,26 +8,19 @@ function readDatabase() {
 function ordenedRamal(){
    
    const funcionarios = readDatabase();
+   
    const  worker = funcionarios.map((item) => {
-      return item.nome;
+      return {id: item.id, name: item.name, extension: item.extension};
    });
 
-   const workerOrdened = worker.sort();
-   let workerOrdenedRamal = [];
+   let workerOrdened = worker.sort(function (ant, pos){
+      const compareAnt = ant.name.toLowerCase();
+      const comparePos = pos.name.toLowerCase();
 
-   workerOrdened.forEach((itemOrdened, index) =>{
-      workerOrdenedRamal[index] = {
-         nome: itemOrdened,
-      };
-      funcionarios.forEach((item) => {
-         if(item.nome === itemOrdened){
-            workerOrdenedRamal[index].ramal = item.ramal;
-         }
-      });
+      return compareAnt == comparePos ? 0 : compareAnt > comparePos ? 1 : -1;
    });
 
-   console.log(workerOrdenedRamal);
-   return workerOrdenedRamal;
+   return workerOrdened;
 };
 
 module.exports = ordenedRamal;

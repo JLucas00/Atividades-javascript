@@ -11,7 +11,7 @@ function filterForSector(sector){
    
    const  workerSector = funcionarios.filter((item) => {
 
-      if(item.setor === sector){
+      if(item.sector === sector){
          return true;
       }else{
          return false;
@@ -20,7 +20,7 @@ function filterForSector(sector){
    });
 
    const worker = workerSector.map((item) =>{
-      return item.nome;
+      return item.id, item.name;
    });
 
    console.log(worker);

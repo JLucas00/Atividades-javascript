@@ -22,13 +22,32 @@ function writeDatabase(newData) {
    fs.writeFileSync("database.json", JSON.stringify([...database, newData]));
 }
 
+
 server.post('/funcionarios/database', function(req,res){
 
-   const {nome, data, email, matricula, ramal, setor} = req.body;
+   const database = readDatabase();
+   let id = database[database.length - 1].id + 1;
+   const {nome, data, email, ramal, setor} = req.body;
 
-   writeDatabase({nome: nome, dataNascimento: data, email:email, numeroMatricula:matricula, ramal:ramal, setor:setor});
+   writeDatabase({id: id, name: nome, email:email, extension:ramal, birthDay: data, sector:setor});
 
    res.json(req.body);
+
+});
+
+server.get('/start', function(req,res){
+   
+   const database = readDatabase();
+   const datasector = database.map(element => {
+      return element.sector;
+   });
+   datasector.sort();
+
+   const filteredSector = datasector.filter(function(ele , pos){
+      return datasector.indexOf(ele) == pos;
+  }) 
+   
+   res.json(filteredSector);
 
 });
 
