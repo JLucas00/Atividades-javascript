@@ -1,0 +1,114 @@
+   <!DOCTYPE html>
+   <html lang="pt-br">
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="style.css">
+      <title>Aplicação JS</title>
+   </head>
+   <body>
+      <header>
+         <h1>Aplicação com servidor separado em duas partes</h1>
+      </header>
+      <main>
+
+         <div>
+            <form action="" id="formulario">
+
+               <legend><h3>Formulário</h3></legend>
+               <div class="formSeparador">
+                  <label for="nome"> Digite o nome do funcionário:</label>
+                  <input type="text" id="nome">
+               </div>
+               
+               <div class="formSeparador">
+                  <label for="data">Digite a data de nascimento:</label>
+                  <input type="date" id="data">
+               </div>
+
+               <div class="formSeparador">
+                  <label for="email">Digite o email:</label>
+                  <input type="email" id="email">
+               </div>
+
+               <div class="formSeparador">
+                  <label for="matricula">Digite a matrícula:</label>
+                  <input type="number" id="matricula">
+               </div>
+
+               <div class="formSeparador">
+                  <label for="ramal">Digite o ramal:</label>
+                  <input type="number" id="ramal">
+               </div>
+
+               <div class="formSeparador">
+                  <label for="setor">Escolha o setor:</label>
+                  <select name="setor" id="setor">
+
+                     <option value="administrativo">Administrativo</option>
+                     <option value="financeiro">Financeiro</option>
+                     <option value="marketing">Marketing</option>
+                     <option value="RH">RH</option>
+         
+                  </select>
+               </div>
+
+               <button type="button" onclick="enviarDados()">Enviar</button>
+
+            </form>
+         </div>
+         <div id="aplicacoes">
+            
+            <div>
+            <p>Aniversariantes:</p>
+            <select name="aplicacao-aniversariantes" id="mes-aniversariantes">
+
+               <option value="1">Janeiro</option>
+               <option value="2">Fevereiro</option>
+               <option value="3">Março</option>
+               <option value="4">Abril</option>
+               <option value="5">Maio</option>
+               <option value="6">Junho</option>
+               <option value="7">Julho</option>
+               <option value="8">Agosto</option>
+               <option value="9">Setembro</option>
+               <option value="10">Outubro</option>
+               <option value="11">Novembro</option>
+               <option value="12">Dezembro</option>
+   
+            </select>
+
+            <button type="button" onclick="aplicacaoAniversariantes()">Pesquisar</button>
+            </div>
+            <div>
+               <p>Setor:</p>
+            <select name="setor" id="pesquisaSetor">
+
+               <option value="administrativo">Administrativo</option>
+               <option value="financeiro">Financeiro</option>
+               <option value="marketing">Marketing</option>
+               <option value="RH">RH</option>
+   
+            </select>
+
+            <button type="button" onclick="aplicacaoSetor()">Pesquisar</button>
+            </div>
+
+            <div>
+            
+               <p>Ramal:</p>
+
+            <button type="button" onclick="aplicacaoRamal()">Pesquisar</button>
+            </div>
+            
+         </div>
+         <div>
+            <table id="resultado"></table>
+         </div>
+
+      </main>
+
+      <script src="script.js"></script>
+   </body>
+   </html>
