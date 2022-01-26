@@ -26,7 +26,7 @@ function writeDatabase(newData) {
 server.post('/funcionarios/database', function(req,res){
 
    const database = readDatabase();
-   let id = database[database.length - 1].id + 1;
+   let id = database[datlength - 1].id + 1;
    const {nome, data, email, ramal, setor} = req.body;
 
    writeDatabase({id: id, name: nome, email:email, extension:ramal, birthDay: data, sector:setor});

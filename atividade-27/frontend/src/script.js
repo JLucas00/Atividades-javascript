@@ -152,7 +152,6 @@ function start() {
             // Examine the text in the response
             response.json().then(function (data) {
 
-
                data.forEach(element => {
                   document.getElementById("pesquisaSetor").innerHTML += `<option value="${element}">${element}</option>`
                   document.getElementById("setor").innerHTML += `<option value="${element}">${element}</option>`
