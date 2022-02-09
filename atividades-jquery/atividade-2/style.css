@@ -1,0 +1,120 @@
+*{
+   margin: 0;
+   padding: 0;
+}
+body{
+   overflow-x: hidden;
+   width: 100vw;
+   min-width: 700px;
+   height: min-content;
+   background-color: rgb(65, 65, 65);
+}
+header{
+   width: 100%;
+   height: 50px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   
+   color: whitesmoke;
+}
+main{
+   padding-top: 20px;
+   padding-left: 20px;
+   padding-right: 20px;
+   color: whitesmoke;
+   width: 100%;
+   min-height: 100vh;
+   max-height: min-content;
+   display: flex;
+   flex-direction: column;
+}
+main div{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+#select-moedas{
+   display: flex;
+   width: 250px;
+   height: 250px;
+   background-color: rgb(133, 133, 133);
+   padding: 5px;
+   border-radius: 15px;
+}
+#select-moedas fieldset{
+   width: 100%;
+   padding: 5px;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-evenly;
+   align-items: center;
+   border-radius: 15px;
+   text-align: center;
+}
+#moedas{
+   width: 120px;
+   height: 30px;
+   border-radius: 10px;
+   background-color: rgb(105, 105, 105);
+   color: whitesmoke;
+}
+
+#search-forDate{
+   display: flex;
+   width: 250px;
+   height: 250px;
+   background-color: rgb(133, 133, 133);
+   padding: 5px;
+   border-radius: 15px;
+}
+#search-forDate fieldset{
+   width: 100%;
+   height: 95%;
+   padding: 5px;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-evenly;
+   align-items: center;
+   border-radius: 15px;
+   text-align: center;
+}
+input[type = "date"]{
+   background-color: rgb(105, 105, 105);
+   color: whitesmoke;
+}
+button{
+   padding: 5px;
+   border-radius: 5px;
+}
+#formularios{
+   display: flex;
+   flex-direction: row;
+   justify-content: space-around;
+   align-items: left;
+   height: 100%;
+}
+#cotacao{
+   width: 100%;
+   padding: 50px 0 50px 0;
+   height: min-content;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+table {
+   font-family: arial, sans-serif;
+   border-collapse: collapse;
+ }
+ 
+ td, th {
+   border: 1px solid #dddddd;
+   text-align: left;
+   padding: 8px;
+ }
+ 
+ tr:nth-child(even) {
+   background-color: #300000;
+ }

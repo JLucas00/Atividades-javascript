@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="style.css">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+   <title>Cotação de moedas</title>
+</head>
+
+<body>
+   <header>
+      <h1>Cotação de moedas</h1>
+   </header>
+   <main>
+
+      <div id="formularios">
+         <form id="select-moedas">
+            <fieldset>
+               <label for="moedasdroplist"> <strong>Selecione uma moeda para saber sua cotação:</strong> </label>
+               <select name="moedasdroplist" id="moedas">
+                  <option value="null" selected >Moedas</option>
+               </select>
+               <h4 id="valor-moeda"></h4>
+            </fieldset>
+         </form>
+         <form id="search-forDate">
+            
+            <fieldset>
+               <h3>Selecione um período para ver a cotação da moeda:</h3>
+               <label for="data-inicio">Data inicial:</label>
+               <input type="date" name="data-inicio" id="data-inicio">
+               <label for="data-fim">Data final:</label>
+               <input type="date" name="data-fim" id="data-fim">
+               <button type="button" id="btn-search">Buscar</button>
+            </fieldset>
+   
+         </form>
+      </div>
+      <div>
+         <div id="cotacao">
+
+         </div>
+         <table id="tabela">
+         </table>
+      </div>
+
+
+
+   </main>
+
+   <script src="script.js"></script>
+</body>
+
+</html>
