@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="style.css">
+   <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+   <title>Portfólio de Games</title>
+</head>
+<body>
+   <header>
+      <h1>Portfólio de Games</h1>
+   </header>
+   <main>
+
+
+      <form action="">
+         <fieldset>
+            <legend>Informações sobre o Jogo</legend>
+            <div>
+               <p for="nome-jogo">Nome do Jogo:</p>
+               <input type="text" id="nome-jogo">
+            </div>
+            <div>
+               <p for="ano">Ano de lançamento:</p>
+               <input type="number" min="1950" id="ano">
+            </div>
+            <div>
+               <p for="genero">Gênero:</p>
+               <input type="text" id="genero">
+            </div>
+            <div>
+               <p for="multiplayer">Multiplayer:</p>
+               <label for="multiplayer">Sim</label> 
+               <input type="radio" name="multiplayer" value="true" checked > 
+               <label for="multiplayer">Não</label>
+               <input type="radio" name="multiplayer" value="false">
+            </div>
+            <div>
+               <p for="offline">Offline:</p>
+               <label for="offline">Sim</label>
+               <input type="radio" name="offline" checked value="true">
+               <label for="multiplayer">Não</label>
+               <input type="radio" name="offline" value="false">
+            </div>
+            <div>
+               <p for="crossplataform">Crossplataform:</p>
+               <label for="crossplataform">Sim</label>
+               <input type="radio" name="crossplataform" checked value="true">
+               <label for="multiplayer">Não</label>
+               <input type="radio" name="crossplataform" value="false"> 
+            </div>
+            <button type="button" id="btn-send">Enviar</button>
+         </fieldset>
+      </form>
+      
+   </main>
+
+
+
+
+   <script src="script.js"></script>
+</body>
+</html>
