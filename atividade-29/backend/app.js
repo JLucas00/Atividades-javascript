@@ -13,53 +13,59 @@ server.use(cors());
 server.use(express.json());
 
 
-class Calculadora{
-   constructor(operand1, operand2, operation){
-      this.operand1 = operand1;
-      this.operand2 = operand2;
-      this.operation = operation;
-   }
-   setOperand1(_operand1){
-      this.operand1 = _operand1;
-   }
-   setOperand2(_operand2){
-      this.operand2 = _operand2;
-   }
-   setOperation(_operation){
-      this.operation = _operation;
-   }
-   getResult(){
 
-      switch (this.operation){
-         case "":
-            return this.operand1;
-         case "+":
-            return (Number(this.operand1)+Number(this.operand2));
-         case "-":
-            return (Number(this.operand1)-Number(this.operand2));
-         case "*":
-            return (Number(this.operand1)*Number(this.operand2));
-         case "/":
-            return (Number(this.operand1)/Number(this.operand2));
-      }
+   function calculadora(operand1, operand2, operation){
+
+      return {
+         operand1: operand1,
+         operand2: operand2,
+         operation: operation,
+
+         getResult(){
+
+            switch (operation){
+               case "":
+                  return operand1;
+               case "+":
+                  return (Number(operand1)+Number(operand2));
+               case "-":
+                  return (Number(operand1)-Number(operand2));
+               case "*":
+                  return (Number(operand1)*Number(operand2));
+               case "/":
+                  return (Number(operand1)/Number(operand2));
+            }
+            
+         },
+         clearCalculator(){
+            return{
+               operand1: "0",
+               operand2: "0",
+               operation: ""
+            }
+            
+         }
+      };
    }
-   clearCalculator(){
-      this.operand1 = "0";
-      this.operand2 = "0";
-      this.operation = ""
-   }
-}
-const calculator = new Calculadora("0","0","");
+   
 
 
 server.post('/calculadora', function(req,res){
 
-   const calculator = new Calculadora("0","0","");
-   calculator.setOperand1(req.body.operand1)
-   calculator.setOperand2(req.body.operand2)
-   calculator.setOperation(req.body.operation)
+   const operand1 = req.body.operand1;
+   const operand2 = req.body.operand2;
+   const operation = req.body.operation;
+   const calculator = calculadora(operand1 , operand2 , operation);
 
-   res.json(calculator.getResult());
+   if(req.body.clear === false){
+      const resultado = calculator.getResult();
+
+      res.json(resultado);
+   }else{
+      const resultado = calculator.clearCalculator();
+      res.json(resultado)
+   }
+   
 
 });
 

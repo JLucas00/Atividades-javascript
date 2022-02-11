@@ -94,16 +94,17 @@ function insertOperation(){
 
 function insertResult(){
    calculator.operand2 = (operando);
-console.log(calculator.operand1)
-console.log(calculator.operand2)
-console.log(calculator.operation)
+   console.log(calculator.operand1)
+   console.log(calculator.operation)
+   console.log(calculator.operand2)
    fetch(`${url}/calculadora`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
          operand1: calculator.operand1,
          operation: calculator.operation,
-         operand2: calculator.operand2
+         operand2: calculator.operand2,
+         clear: false
       })
    })
       .then(
@@ -116,17 +117,18 @@ console.log(calculator.operation)
             // Examine the text in the response
             response.json().then(function (data) {
                
-               console.log(typeof(data));
-
+               data = Number(data);
                display.innerHTML = data;
 
                if(Number.isInteger(data)){
                   display.innerHTML = data;
                }else{
-                  display.innerHTML = data.toFixed(4);
+                  display.innerHTML = Number(data).toFixed(4);
                }
                calculator.operand1 = `${data}`;
+               operando = `${data}`
                calculator.operation = "";
+               calculator.operand2 = "0";
                
                return data;
             });
@@ -140,10 +142,40 @@ console.log(calculator.operation)
 function deleteNumber(){
    operando = operando.slice(0,-1);
    display.innerHTML = operando;
+
 }
 
 function  cancelEntry(){
-   calculator.clearCalculator();
    operando = "0"
    display.innerHTML = operando;
+   
+
+   fetch(`${url}/calculadora`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+         clear: true
+      })
+   })
+      .then(
+         function (response) {
+            if (response.status !== 200) {
+               console.log('Looks like there was a problem. Status Code: ' + response.status);
+               return;
+            }
+   
+            // Examine the text in the response
+            response.json().then(function (data) {
+               console.log(data);
+
+               calculator.operand1 = data.operand1;
+               calculator.operation = data.operation;
+               calculator.operand2 = data.operand2;
+               return data;
+            });
+         }
+      )
+      .catch(function (err) {
+         console.log('Fetch Error :-S', err);
+      });
 }
