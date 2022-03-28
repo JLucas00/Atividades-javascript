@@ -1,0 +1,28 @@
+*{
+   margin: 0;
+   padding: 0;
+}
+body{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+#space-table{
+   width: 80vw;
+   min-width: 600px;
+}
+table {
+   font-family: arial, sans-serif;
+   border-collapse: collapse;
+   width: 100%;
+}
+ 
+td, th {
+   border: 1px solid #808080;
+   text-align: left;
+   padding: 8px;
+}
+ 
+tr:nth-child(even) {
+   background-color: #ceb4b4;
+}
