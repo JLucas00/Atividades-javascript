@@ -1,0 +1,30 @@
+*{
+   margin: 0;
+   padding: 0;
+}
+header{
+   display: flex;
+   justify-content: center;
+}
+main{
+   padding: 100px;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+#inputs{
+   display: flex;
+   flex-direction: column;
+   width: 500px;
+   gap: 20px;
+}
+#result{
+   width: 400px;
+   height: 200px;
+   background-color: beige;
+   margin-top: 100px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
